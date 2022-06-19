@@ -1,0 +1,140 @@
+#individual {
+    max-width: 70%;
+    min-height: 600px;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    margin: auto;
+    border: 4px solid rgb(241, 241, 241);
+    display: flex;
+    flex-flow: row wrap;
+    /* margin-bottom: 4rem; */
+}
+
+.indi1 {
+    padding: 1em;
+    height: 100%;
+    width: 60%;
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.indi-pic {
+    position: relative;
+    width: 100%;
+}
+
+.indi-pic img {
+    object-fit: cover;
+    width: 100%;
+}
+
+.indi-action {
+    padding: 1em 1em 1.5em 0px;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.indi-action p {
+    margin: 0;
+}
+
+.indiactionbuttons {
+    padding: 1em 1em 1em 0px;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.indibuttons {
+    box-shadow: rgb(238 238 238) 1px 1px 2px 2px;
+    margin: 0.5em 0.5em 0.5em 0px;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    border: 1px solid rgb(216, 216, 216);
+    height: 36px;
+    min-width: 44%;
+    max-width: 150px;
+    padding: 0.3em 0.5em;
+    background-color: rgb(255, 255, 255);
+    color: rgb(11, 89, 137);
+    cursor: pointer;
+    transition: color 0.3s ease-in 0s, background-color 0.3s ease-in 0s;
+}
+
+.indibuttons:hover {
+    color: rgb(255, 255, 255);
+    background-color: rgb(11, 89, 137);
+}
+
+.indibuttons span {
+    margin: 2%;
+}
+
+.comments {
+    width: 40%;
+    padding-top: 1em;
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.comm1 {
+    padding: 0.8em 0.4em 0.8em 0px;
+    border-bottom: 1px solid rgb(238, 238, 238);
+    display: block;
+}
+
+.author {
+    color: rgb(0, 86, 175);
+    font-weight: 800;
+    font-size: 0.8em;
+    margin-right: 0.7em;
+    cursor: pointer;
+}
+
+.comment1 {
+    color: rgb(89, 92, 91);
+    font-weight: 500;
+    font-size: 0.9em;
+}
+
+.commsub {
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+}
+
+.commsub input,
+button {
+    outline: none;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-image: initial;
+    padding: 0.8em 0.4em 0.8em 0px;
+    border-bottom: 1px solid rgb(238, 238, 238);
+    color: rgb(89, 92, 91);
+}
+
+@media screen and (max-width: 512px) {
+    #individual {
+        max-width: 90%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #individual {
+        max-width: 80%;
+    }
+    .indi1 {
+        width: 100%;
+        padding-bottom: 0px;
+    }
+    .comments {
+        width: 100%;
+        padding: 1em;
+    }
+}

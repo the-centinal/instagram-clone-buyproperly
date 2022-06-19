@@ -1,0 +1,15 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    text-align: center;
+    padding: 3rem;
+}
+
+header img {
+    height: auto;
+    width: 25%;
+}
