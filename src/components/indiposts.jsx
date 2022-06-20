@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import './individual.css'
 
 import { FcLike } from 'react-icons/fc';
@@ -7,7 +7,11 @@ import { BiCommentDots } from 'react-icons/bi';
 
 
 
-function Indiposts(props) {
+function Indiposts(what) {
+  const [like, setlike] = useState(what.likes);
+  const inclike = () =>{
+      setlike(like + 1);
+  };
 
 
   return (
@@ -18,19 +22,19 @@ function Indiposts(props) {
         <div className="indi1">
           <div className="indi-pic">
 
-            <img src={props.img} alt="img" className="post-image" />
+            <img src={what.img} alt="img" className="post-image" />
 
 
           </div>
           <div className="indi-action">
-            <p>{props.caption}</p>
+            <p>{what.caption}</p>
             <div className="indiactionbuttons">
-              <button className="indibuttons">
+              <button onClick={inclike} className="indibuttons">
                 <span>
                   <FcLike />
                 </span>
                 <span>
-                  {props.likes}
+                  {what.likes}
                 </span>
               </button>
               <button className="indibuttons">
@@ -38,7 +42,7 @@ function Indiposts(props) {
                   <BiCommentDots />
                 </span>
                 <span>
-                  {props.num}
+                  {what.num}
                 </span>
               </button>
             </div>
@@ -46,9 +50,9 @@ function Indiposts(props) {
         </div>
         <div className="comments">
           <div className="comm1">
-            <span className="author">{props.uid}
+            <span className="author">{what.uid}
             </span>
-            <span className="comment1">{props.comm}</span>
+            <span className="comment1">{what.comm}</span>
           </div>
           
           <form action="" className="commsub">

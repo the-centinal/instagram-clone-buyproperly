@@ -8,6 +8,8 @@ import { useNavigate } from 'react-router-dom'
 
 function Posts(props) {
     let navigate = useNavigate()
+   
+    
 
     const [like, setlike] = useState(props.likes);
     const inclike = () =>{
@@ -20,7 +22,7 @@ function Posts(props) {
 
 
             <div className="post1">
-                <a href="/individual">
+                <a  href="/individual">
                     <div className="post-image">
                         <img src={props.img} alt="img" />
 
@@ -38,7 +40,7 @@ function Posts(props) {
                             </span>
                         </button>
                         <button onClick={() => {
-                            navigate('/individual')
+                            navigate('/individual') 
                         }} className="buttons">
                             <span>
                                 <BiCommentDots />
