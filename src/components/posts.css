@@ -80,7 +80,7 @@
     }
 }
 
-@media screen and (max-width: 992px) {
+@media screen and (min-width: 513px)and (max-width: 992px) {
     .post1 {
         width: 44%;
     }
