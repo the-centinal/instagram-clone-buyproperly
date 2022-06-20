@@ -29,7 +29,7 @@ function Posts(props) {
                 <div className="posts-action">
                     <p>{props.caption}</p>
                     <div className="actionbuttons">
-                        <button  onclick= {inclike} className="buttons">
+                        <button  onClick= {inclike} className="buttons">
                             <span>
                                 <FcLike />
                             </span>

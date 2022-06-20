@@ -11,7 +11,7 @@ function Indiposts(props) {
 
 
   return (
-    <div id={props.code}>
+   
     
 
       <div id='individual'>
@@ -46,9 +46,9 @@ function Indiposts(props) {
         </div>
         <div className="comments">
           <div className="comm1">
-            <span className="author">{props.author}
+            <span className="author">{props.uid}
             </span>
-            <span className="comment1">{props.comment}</span>
+            <span className="comment1">{props.comm}</span>
           </div>
           
           <form action="" className="commsub">
@@ -59,7 +59,7 @@ function Indiposts(props) {
 
         </div>
       </div>
-    </div>
+    
     
   )
 }

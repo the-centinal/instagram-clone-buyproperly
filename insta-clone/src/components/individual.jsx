@@ -1,22 +1,23 @@
-import React from 'react'
+import React, {Fragment} from 'react'
 import './individual.css'
 
-import finaldata from './practice';
+import lastfullfinaldata from './practice';
 import Head from './header';
 import Indiposts from './indiposts';
 
 
 
 function Individual() {
-  const comments = finaldata.map(item => {
+  const gupshup = lastfullfinaldata.map(item => {
     return (
       <Indiposts
-        code={item.code}
-
+        ucode={item.code}
         caption={item.caption}
         img={item.display_src}
         likes={item.likes}
         num={item.matching}
+        comm={item.baate.text}
+        uid={item.baate.user}
       />
 
     )
@@ -26,7 +27,7 @@ function Individual() {
   return (
     <>
     <Head />
-    {comments}
+    { gupshup }
     </>
   )
 }

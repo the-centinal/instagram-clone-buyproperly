@@ -8,7 +8,7 @@ import {
   
   Routes
 } from "react-router-dom";
-import Practice from './components/practice';
+// import Practice from './components/practice';
 // import Indiposts from './components/indiposts';
 
 function App() {
@@ -18,7 +18,7 @@ function App() {
       <Routes>
         <Route exact path="/" element={< Main />} />
         <Route exact path="/individual" element={< Individual />} />
-        <Route  path='/' element={<Practice />} />
+        
 
       </Routes>
     </Router>

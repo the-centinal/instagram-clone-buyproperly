@@ -14,7 +14,7 @@ for (let i = 0; i < postsdata.length; i++) {
         for (let key2 in comments) {
             if (key2 === value) {
                 matching = comments[key2].length;
-                break;
+                
             }
         }
         numcomm.push({
@@ -30,31 +30,32 @@ for (let i = 0; i < postsdata.length; i++) {
 
 
 const finaldata = postsdata.map((item, i) => Object.assign({}, item, numcomm[i]));
-// for (let i = 0; i < numcomm.length; i++) {
-//     const code2 = numcomm[i].code;
-//     for (let j = 0; j < postsdata.length; j++) {
-//         const element = postsdata[j].code;
-//         if (code2 === element) {
-//             for (let j = 0; j < postsdata.length; j++) {
-//                 for (let i = 0; i < numcomm.length; i++)
-//                 finaldata.push({
-//                     ...postsdata[j],
-//                     ...numcomm[i]
-//                 })
-//                 break;
-//             }
-//             break;
+
+// console.log(finaldata);
+
+const fullfinaldata = []
+
+for (let i = 0; i < finaldata.length; i++) {
+    for (let key in finaldata[i]) {
+        let value = finaldata[i][key];
+        let matching = 0;
+        for (let key2 in comments) {
+            if (key2 === value) {
+                matching = comments[key2];
+
+                break;
+            }
+        }
+        // console.log(matching);
+        fullfinaldata.push({
+            baate :matching});
+        break;
+    }
+    
+}
+
+const lastfullfinaldata = finaldata.map((item, i) => Object.assign({}, item, fullfinaldata[i]));
+console.log(lastfullfinaldata);
 
 
-
-
-
-//         }
-//         break
-
-
-//     }
-// }
-console.log(finaldata);
-
-export default finaldata;
+export default lastfullfinaldata;

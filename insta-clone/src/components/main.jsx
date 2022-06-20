@@ -4,10 +4,10 @@ import Posts from './posts'
 // import postsdata from '../assets/data/posts';
 import '../components/posts.css'
 // import Individual from './individual';
-import finaldata from './practice';
+import lastfullfinaldata from './practice';
 
 function Main() {
-    const post = finaldata.map(item => {
+    const post = lastfullfinaldata.map(item => {
         return (
           <Posts
             key={item.id}
